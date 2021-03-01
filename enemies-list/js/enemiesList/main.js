@@ -4,10 +4,8 @@ console.log("My Enemies List!")
 console.log("----------------")
 
 
-
-
 const getEnemies = () => {
-    return {
+    return [{
         FirstName: "Joshua",
         LastName: "Flowers",
         Offenses: "Being a jerk to me in elementary school, Not being nice to me in elementary school",
@@ -30,17 +28,23 @@ const getEnemies = () => {
         LastName: "Peck",
         Offenses: "Keeps giving me a hotplate",
         IsReallyHated: false
-    }
+    }]
 
 }
+
 
 
 const enemies = getEnemies()
-
-for (let myEnemy of Object.keys(enemies)) {
-    if (enemies.IsReallyHated === true) {
-        console.log(`${myEnemy.FirstName} ${myEnemy.LastName} (Really, really dislike!)`)
+for (let enemy of enemies) {
+    if (enemy.IsReallyHated === true) {
+        console.log(`${enemy.FirstName} ${enemy.LastName} (Really, really dislike!)`)
     } else {
-        console.log(`${myEnemy.FirstName} ${myEnemy.LastName}`)
+        console.log(`${enemy.FirstName} ${enemy.LastName}`)
     }
 }
+
+
+
+
+
+
